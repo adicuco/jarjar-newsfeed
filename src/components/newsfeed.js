@@ -18,12 +18,17 @@ export default class JarJarNewsfeed extends React.PureComponent {
       updates,
     } = this.props
 
-    return (<div>
-      <h1>Newsfeed</h1>
-      {/*
-      * render a list of updates here
-      * {updates.map(update => <ViewUpdate {...update} />)}
-      */}
-    </div>)
+    return (
+      <div className='jarjar-newsfeed'>
+        <h1 className='display-1'>Jar Jar Newsfeed</h1>
+        <br />
+        <div className={'card-grid'}>
+          {updates.map((update) => <ViewUpdate
+            {...update}
+            key={update.id}
+          />)}
+        </div>
+      </div>
+      )
   }
 }
